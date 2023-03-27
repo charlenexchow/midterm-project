@@ -1,0 +1,498 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/*HOME PAGE*/
+
+.main-container {
+  background-image: linear-gradient(to right, 
+    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black,
+    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "q1 q2"
+    "click1 click2";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 8fr 1fr 1fr;
+}
+.header {
+  display: grid;
+  font-family: sloop-script-two, sans-serif;
+  font-size: 15vw;
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  text-shadow: 0px 0px 20px white;
+}
+.q1, .q2 {
+  font-size: 2vw;
+  font-family: obviously, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  align-self: end;
+}
+.click1, .click2 {
+  font-family: obviously-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6vw;
+  margin-bottom: 2.5vh;
+}
+.q1 {
+  grid-area: q1;
+  margin-left: 3vw;
+}
+.q2 {
+  grid-area: q2;
+  justify-self: flex-end;
+  margin-right: 3vw;
+}
+a.click1 {
+  color: white;
+  grid-area: click1;
+  margin-left: 3vw;
+}
+a.click2 {
+  color: white;
+  grid-area: click2;
+  justify-self: flex-end;
+  margin-right: 3vw;
+}
+a.click1:link, a.click1:visited , a.click2:link, a.click2:visited {
+  color: white;
+  text-decoration: none;
+}
+a.click1:hover, a.click2:hover {
+  color: white;
+  text-shadow: 0px 0px 20px white;
+  text-decoration: none;
+}
+
+a.dawn-return:link, a.dusk-return:link, a.dawn-return:visited, a.dusk-return:visited, a.dawn-return:hover, a.dusk-return:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/*DAWN PAGE*/
+
+.dawn-front {
+  background-image: linear-gradient(to left, 
+    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 6fr 4fr 6fr 1fr;
+  grid-template-areas:
+    "dawn-return dawn-return dawn-return"
+    "dawn1 . dawn2"
+    " dawn3 dawn3 dawn3 "
+    "dawn4 dawn5 dawn6"
+    "dawn-click dawn-click dawn-click";
+  gap: 0vw 4vw;
+  padding: 0vw 3vw;
+}
+a.dawn-return {
+  grid-area: dawn-return;
+  font-family: sloop-script-two, sans-serif;
+  font-size: 3vw;
+  justify-self: center;
+  margin-top: 2vh;
+  text-shadow: 0px 0px 20px white;
+  color: white;
+}
+.dawn-type {
+  background-color: white;
+}
+.dawn1 {
+  grid-area: dawn1;
+}
+.dawn2 {
+  grid-area: dawn2;
+}
+.dawn3 {
+  grid-area: dawn3;
+}
+.dawn4 {
+  grid-area: dawn4;
+}
+.dawn5 {
+  grid-area: dawn5;
+}
+.dawn6 {
+  grid-area: dawn6;
+}
+.dawn-name {
+  text-align: center;
+  font-size: 2vw;
+  font-family: obviously, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  border-radius: 3vw;
+}
+.dawn-info {
+  color: white;
+  margin-top: 2vh;
+  font-family: "ibm-plex-mono", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2vw;
+  line-height: 160%;
+  padding-left: 1vw;
+}
+.dawn-click {
+  grid-area: dawn-click;
+  font-family: obviously-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6vw;
+  margin-bottom: 2.5vh;
+  color: white;
+  text-shadow: 0px 0px 20px white;
+}
+
+/*DUSK PAGE*/
+
+.dusk-front {
+  background-image: linear-gradient(to left,
+    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr 6fr 4fr 6fr 1fr;
+  grid-template-areas:
+    "dusk-return dusk-return dusk-return"
+    "dusk1 . dusk2"
+    " dusk3 dusk3 dusk3 "
+    "dusk4 dusk5 dusk6"
+    "dusk-click dusk-click dusk-click";
+  gap: 0vw 4vw;
+  padding: 0vw 3vw;
+}
+a.dusk-return {
+  grid-area: dusk-return;
+  font-family: sloop-script-two, sans-serif;
+  font-size: 3vw;
+  justify-self: center;
+  margin-top: 2vh;
+  text-shadow: 0px 0px 20px white;
+  color: white;
+}
+.dusk-type {
+  background-color: white;
+}
+.dusk1 {
+  grid-area: dusk1;
+}
+.dusk2 {
+  grid-area: dusk2;
+}
+.dusk3 {
+  grid-area: dusk3;
+}
+.dusk4 {
+  grid-area: dusk4;
+}
+.dusk5 {
+  grid-area: dusk5;
+}
+.dusk6 {
+  grid-area: dusk6;
+}
+.dusk-name {
+  text-align: center;
+  font-size: 2vw;
+  font-family: obviously, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  border-radius: 3vw;
+}
+.dusk-info {
+  color: white;
+  margin-top: 2vh;
+  font-family: "ibm-plex-mono", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2vw;
+  line-height: 160%;
+  padding-left: 1vw;
+}
+.dusk-click {
+  grid-area: dusk-click;
+  font-family: obviously-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6vw;
+  margin-bottom: 2.5vh;
+  color: white;
+  text-shadow: 0px 0px 20px white;
+  justify-self: flex-end;
+}
+
+/*DAWN INTRO*/
+
+.dawn-intro {
+  background-image: linear-gradient(to left, 
+    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "dawn-intro-song dawn-intro-text";
+  gap: 0vw 0vw;
+  padding: 0vw 3vw;
+}
+.dawn-intro-song {
+  grid-area: dawn-intro-song;
+  align-self: center;
+}
+.dawn-intro-text {
+  grid-area: dawn-intro-text;
+  font-size: 1.5vw;
+  font-family: obviously, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-right: 6vw;
+  line-height: 200%;
+}
+
+/*DUSK INTRO*/
+
+.dusk-intro {
+  background-image: linear-gradient(to left,
+    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "dusk-intro-text dusk-intro-song";
+  gap: 0vw 0vw;
+  padding: 0vw 3vw;
+}
+.dusk-intro-song {
+  grid-area: dusk-intro-song;
+  align-self: center;
+  justify-self: flex-end;
+}
+.dusk-intro-text {
+  grid-area: dusk-intro-text;
+  font-size: 1.5vw;
+  font-family: obviously, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  margin-left: 6vw;
+  line-height: 200%;
+}
+
+/*DAWN TRANSITION*/
+
+.dawn-transition {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("anime-sunrise.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+/*DUSK TRANSITION*/
+
+.dusk-transition {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("anime-sunset.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+/*DAWN PLAYLIST*/
+
+.dawn-playlist {
+  background-image: linear-gradient(to top,
+    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
+  width: 100vw;
+  height: 1200vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-areas:
+    "dawn-song-1"
+    "dawn-art-1"
+    "dawn-song-2"
+    "dawn-art-2"
+    "dawn-song-3"
+    "dawn-art-3"
+    "dawn-song-4"
+    "dawn-art-4"
+    "dawn-song-5"
+    "dawn-art-5"
+    "dawn-song-6"
+    "dawn-art-6";
+}
+
+/*DAWN SONGS*/
+
+.dawn-song {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 0vw 0vw;
+  padding: 0vw 3vw;
+}
+.dawn-audio {
+  align-self: flex-end;
+}
+.dawn-called {
+  color: white;
+  line-height: 800%;
+  text-align: center;
+  align-self: flex-start;
+  margin-top: 15vh;
+  justify-self: flex-start;
+}
+.dawn-song-title {
+  font-family: sloop-script-two, sans-serif;
+  font-size: 9vw;
+  text-shadow: 0px 0px 20px white;
+}
+.dawn-artist {
+  font-family: obviously-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5vw;
+}
+.dawn-song-1 {
+  grid-area: dawn-song-1;
+  grid-template-areas:
+    "dawn-audio-1 dawn-called-1";
+}
+.dawn-audio-1 {
+  grid-area: dawn-audio-1;
+}
+.dawn-called-1 {
+  grid-area: dawn-called-1;
+}
+.dawn-song-2 {
+  grid-area: dawn-song-2;
+  grid-template-areas:
+    "dawn-audio-2 dawn-called-2";
+}
+.dawn-audio-2 {
+  grid-area: dawn-audio-2;
+}
+.dawn-called-2 {
+  grid-area: dawn-called-2;
+}
+.dawn-song-3 {
+  grid-area: dawn-song-3;
+  grid-template-areas:
+    "dawn-audio-3 dawn-called-3";
+}
+.dawn-audio-3 {
+  grid-area: dawn-audio-3;
+}
+.dawn-called-3 {
+  grid-area: dawn-called-3;
+}
+.dawn-song-4 {
+  grid-area: dawn-song-4;
+  grid-template-areas:
+    "dawn-audio-4 dawn-called-4";
+}
+.dawn-audio-4 {
+  grid-area: dawn-audio-4;
+}
+.dawn-called-4 {
+  grid-area: dawn-called-4;
+}
+.dawn-song-5 {
+  grid-area: dawn-song-5;
+  grid-template-areas:
+    "dawn-audio-5 dawn-called-5";
+}
+.dawn-audio-5 {
+  grid-area: dawn-audio-5;
+}
+.dawn-called-5 {
+  grid-area: dawn-called-5;
+}
+.dawn-song-6 {
+  grid-area: dawn-song-6;
+  grid-template-areas:
+    "dawn-audio-6 dawn-called-6";
+}
+.dawn-audio-6 {
+  grid-area: dawn-audio-6;
+}
+.dawn-called-6 {
+  grid-area: dawn-called-6;
+}
+
+/*DAWN ART*/
+
+.dawn-art {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+.dawn-art-1 {
+  grid-area: dawn-art-1;
+}
+.dawn-art-2 {
+  grid-area: dawn-art-2;
+}
+.dawn-art-3 {
+  grid-area: dawn-art-3;
+}
+.dawn-art-4 {
+  grid-area: dawn-art-4;
+}
+.dawn-art-5 {
+  grid-area: dawn-art-5;
+}
+.dawn-art-6 {
+  grid-area: dawn-art-6;
+}
+
+/*DAWN ENDING*/
+
+.dawn-ending {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("real-sunrise.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+/*DUSK ENDING*/
+
+.dusk-ending {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("real-sunset.gif");
+  background-size: cover;
+  background-position: center;
+}
