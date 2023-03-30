@@ -249,7 +249,7 @@ a.dusk-return {
   background-image: linear-gradient(to left, 
     #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -261,6 +261,7 @@ a.dusk-return {
 .dawn-intro-song {
   grid-area: dawn-intro-song;
   align-self: center;
+  margin-bottom: 25vh;
 }
 .dawn-intro-text {
   grid-area: dawn-intro-text;
@@ -279,7 +280,7 @@ a.dusk-return {
   background-image: linear-gradient(to left,
     #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -292,6 +293,7 @@ a.dusk-return {
   grid-area: dusk-intro-song;
   align-self: center;
   justify-self: flex-end;
+  margin-bottom: 25vh;
 }
 .dusk-intro-text {
   grid-area: dusk-intro-text;
@@ -312,6 +314,18 @@ a.dusk-return {
   background-image: url("anime-sunrise.gif");
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.dawn-transition-text, .dusk-transition-text {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: 5vh;
+  color: white;
 }
 
 /*DUSK TRANSITION*/
@@ -322,56 +336,67 @@ a.dusk-return {
   background-image: url("anime-sunset.gif");
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /*DAWN PLAYLIST*/
 
 .dawn-playlist {
   background-image: linear-gradient(to top,
-    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
+    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black);
   width: 100vw;
-  height: 900vh;
+  height: 700vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
+    "spacing"
     "dawn-song-1"
     "dawn-art-1"
     "dawn-song-2"
     "dawn-art-2"
     "dawn-song-3"
     "dawn-art-3"
-    "dawn-song-4"
-/*    "dawn-art-4"*/
+    /*"dawn-song-4"
+    "dawn-art-4"
     "dawn-song-5"
-/*    "dawn-art-5"*/
+    "dawn-art-5"
     "dawn-song-6"
-/*    "dawn-art-6";*/
+    "dawn-art-6";*/
 }
 
 /*DUSK PLAYLIST*/
 
 .dusk-playlist {
   background-image: linear-gradient(to top,
-    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    black, #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
   width: 100vw;
-  height: 900vh;
+  height: 700vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   grid-template-areas:
+    "spacing"
     "dusk-song-1"
     "dusk-art-1"
     "dusk-song-2"
     "dusk-art-2"
     "dusk-song-3"
     "dusk-art-3"
-    "dusk-song-4"
-/*    "dusk-art-4"*/
+    /*"dusk-song-4"
+    "dusk-art-4"
     "dusk-song-5"
-/*    "dusk-art-5"*/
+    "dusk-art-5"
     "dusk-song-6"
-/*    "dusk-art-6";*/
+    "dusk-art-6";*/
+}
+.spacing {
+  grid-area: spacing;
+  width: 100vw;
+  height: 25vh;
+  display: grid;
 }
 
 /*DAWN SONGS*/
@@ -1047,7 +1072,7 @@ a.dusk-return {
   grid-column: 1 / span 8;
   grid-row: 5 / span 2;
   align-self: flex-end;
-  color: black;
+  color: #0cc8f2;
 }
 .dusk-art-3-v4 {
   grid-column: 1 / span 3;
@@ -1064,7 +1089,7 @@ a.dusk-return {
   grid-row: 1 / span 1;
   font-size: 1.5vw;
   line-height: 150%;
-  color: black;
+  color: white;
 }
 .dusk-art-3-v2 {
   grid-column: 5 / span 2;
@@ -1101,6 +1126,18 @@ a.dusk-return {
   background-image: url("real-sunrise.gif");
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.dawn-ending-text, .dusk-ending-text {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: 5vh;
+  color: white;
 }
 
 /*DUSK ENDING*/
@@ -1111,4 +1148,7 @@ a.dusk-return {
   background-image: url("real-sunset.gif");
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
