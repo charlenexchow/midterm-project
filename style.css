@@ -1,1154 +1,2289 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+/*computer layout*/
+
+@media only screen and (min-width: 600px) {
+ 
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  /*HOME PAGE*/
+
+  .main-container {
+    background-image: linear-gradient(to right, 
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black,
+      #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "q1 q2"
+      "click1 click2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8fr 1fr 1fr;
+  }
+  .header {
+    display: grid;
+    font-family: sloop-script-two, sans-serif;
+    font-size: 15vw;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    text-shadow: 0px 0px 20px white;
+  }
+  .q1, .q2 {
+    font-size: 2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-self: end;
+  }
+  .click1, .click2 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vw;
+    margin-bottom: 2.5vh;
+  }
+  .q1 {
+    grid-area: q1;
+    margin-left: 3vw;
+  }
+  .q2 {
+    grid-area: q2;
+    justify-self: flex-end;
+    margin-right: 3vw;
+  }
+  a.click1 {
+    color: white;
+    grid-area: click1;
+    margin-left: 3vw;
+  }
+  a.click2 {
+    color: white;
+    grid-area: click2;
+    justify-self: flex-end;
+    margin-right: 3vw;
+  }
+  a.click1:link, a.click1:visited , a.click2:link, a.click2:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a.click1:hover, a.click2:hover {
+    color: white;
+    text-shadow: 0px 0px 20px white;
+    text-decoration: none;
+  }
+
+  a.dawn-return:link, a.dusk-return:link, a.dawn-return:visited, a.dusk-return:visited, a.dawn-return:hover, a.dusk-return:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  /*DAWN PAGE*/
+
+  .dawn-front {
+    background-image: linear-gradient(to left, 
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 6fr 4fr 6fr 1fr;
+    grid-template-areas:
+      "dawn-return dawn-return dawn-return"
+      "dawn1 . dawn2"
+      " dawn3 dawn3 dawn3 "
+      "dawn4 dawn5 dawn6"
+      "dawn-click dawn-click dawn-click";
+    gap: 0vw 4vw;
+    padding: 0vw 3vw;
+  }
+  a.dawn-return {
+    grid-area: dawn-return;
+    font-family: sloop-script-two, sans-serif;
+    font-size: 3vw;
+    justify-self: center;
+    margin-top: 2vh;
+    text-shadow: 0px 0px 20px white;
+    color: white;
+  }
+  .dawn-type {
+    background-color: white;
+  }
+  .dawn1 {
+    grid-area: dawn1;
+  }
+  .dawn2 {
+    grid-area: dawn2;
+  }
+  .dawn3 {
+    grid-area: dawn3;
+  }
+  .dawn4 {
+    grid-area: dawn4;
+  }
+  .dawn5 {
+    grid-area: dawn5;
+  }
+  .dawn6 {
+    grid-area: dawn6;
+  }
+  .dawn-name {
+    text-align: center;
+    font-size: 2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 3vw;
+  }
+  .dawn-info {
+    color: white;
+    margin-top: 2vh;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2vw;
+    line-height: 160%;
+    padding-left: 1vw;
+  }
+  .dawn-click {
+    grid-area: dawn-click;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vw;
+    margin-bottom: 2.5vh;
+    color: white;
+    text-shadow: 0px 0px 20px white;
+  }
+
+  /*DUSK PAGE*/
+
+  .dusk-front {
+    background-image: linear-gradient(to left,
+      #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 6fr 4fr 6fr 1fr;
+    grid-template-areas:
+      "dusk-return dusk-return dusk-return"
+      "dusk1 . dusk2"
+      " dusk3 dusk3 dusk3 "
+      "dusk4 dusk5 dusk6"
+      "dusk-click dusk-click dusk-click";
+    gap: 0vw 4vw;
+    padding: 0vw 3vw;
+  }
+  a.dusk-return {
+    grid-area: dusk-return;
+    font-family: sloop-script-two, sans-serif;
+    font-size: 3vw;
+    justify-self: center;
+    margin-top: 2vh;
+    text-shadow: 0px 0px 20px white;
+    color: white;
+  }
+  .dusk-type {
+    background-color: white;
+  }
+  .dusk1 {
+    grid-area: dusk1;
+  }
+  .dusk2 {
+    grid-area: dusk2;
+  }
+  .dusk3 {
+    grid-area: dusk3;
+  }
+  .dusk4 {
+    grid-area: dusk4;
+  }
+  .dusk5 {
+    grid-area: dusk5;
+  }
+  .dusk6 {
+    grid-area: dusk6;
+  }
+  .dusk-name {
+    text-align: center;
+    font-size: 2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 3vw;
+  }
+  .dusk-info {
+    color: white;
+    margin-top: 2vh;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2vw;
+    line-height: 160%;
+    padding-left: 1vw;
+  }
+  .dusk-click {
+    grid-area: dusk-click;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vw;
+    margin-bottom: 2.5vh;
+    color: white;
+    text-shadow: 0px 0px 20px white;
+    justify-self: flex-end;
+  }
+
+  /*DAWN INTRO*/
+
+  .dawn-intro {
+    background-image: linear-gradient(to left, 
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dawn-intro-song dawn-intro-text";
+    gap: 0vw 0vw;
+    padding: 0vw 3vw;
+  }
+  .dawn-intro-song {
+    grid-area: dawn-intro-song;
+    align-self: center;
+
+  }
+  .dawn-intro-text {
+    grid-area: dawn-intro-text;
+    font-size: 1.5vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin-right: 6vw;
+    line-height: 200%;
+  }
+
+  /*DUSK INTRO*/
+
+  .dusk-intro {
+    background-image: linear-gradient(to left,
+      #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dusk-intro-text dusk-intro-song";
+    gap: 0vw 0vw;
+    padding: 0vw 3vw;
+  }
+  .dusk-intro-song {
+    grid-area: dusk-intro-song;
+    align-self: center;
+    justify-self: flex-end;
+  }
+  .dusk-intro-text {
+    grid-area: dusk-intro-text;
+    font-size: 1.5vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin-left: 6vw;
+    line-height: 200%;
+  }
+
+  /*DAWN TRANSITION*/
+
+  .dawn-transition {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("anime-sunrise.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .dawn-transition-text, .dusk-transition-text {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: white;
+  }
+
+  /*DUSK TRANSITION*/
+
+  .dusk-transition {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("anime-sunset.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /*DAWN PLAYLIST*/
+
+  .dawn-playlist {
+    background-image: linear-gradient(to top,
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black);
+    width: 100vw;
+    height: 700vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "spacing"
+      "dawn-song-1"
+      "dawn-art-1"
+      "dawn-song-2"
+      "dawn-art-2"
+      "dawn-song-3"
+      "dawn-art-3"
+      /*"dawn-song-4"
+      "dawn-art-4"
+      "dawn-song-5"
+      "dawn-art-5"
+      "dawn-song-6"
+      "dawn-art-6";*/
+  }
+
+  /*DUSK PLAYLIST*/
+
+  .dusk-playlist {
+    background-image: linear-gradient(to top,
+      black, #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    width: 100vw;
+    height: 700vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "spacing"
+      "dusk-song-1"
+      "dusk-art-1"
+      "dusk-song-2"
+      "dusk-art-2"
+      "dusk-song-3"
+      "dusk-art-3"
+      /*"dusk-song-4"
+      "dusk-art-4"
+      "dusk-song-5"
+      "dusk-art-5"
+      "dusk-song-6"
+      "dusk-art-6";*/
+  }
+  .spacing {
+    grid-area: spacing;
+    width: 100vw;
+    height: 25vh;
+    display: grid;
+  }
+
+  /*DAWN SONGS*/
+
+  .dawn-song {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    padding: 8vh 3vw;*/
+  }
+  .dawn-audio {
+    margin-top: 5vh;
+    justify-self: center;
+  }
+  .dawn-called {
+    color: white;
+    line-height: 600%;
+    text-align: center;
+  }
+  .dawn-song-title {
+    font-family: sloop-script-two, sans-serif;
+    font-size: 9vw;
+    text-shadow: 0px 0px 20px white;
+  }
+  .dawn-artist {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5vw;
+  }
+  .dawn-song-1 {
+    grid-area: dawn-song-1;
+    grid-template-areas:
+      "dawn-called-1"
+      "dawn-audio-1";
+  }
+  .dawn-audio-1 {
+    grid-area: dawn-audio-1;
+  }
+  .dawn-called-1 {
+    grid-area: dawn-called-1;
+  }
+  .dawn-song-2 {
+    grid-area: dawn-song-2;
+    grid-template-areas:
+      "dawn-called-2"
+      "dawn-audio-2";
+  }
+  .dawn-audio-2 {
+    grid-area: dawn-audio-2;
+  }
+  .dawn-called-2 {
+    grid-area: dawn-called-2;
+  }
+  .dawn-song-3 {
+    grid-area: dawn-song-3;
+    grid-template-areas:
+      "dawn-called-3"
+      "dawn-audio-3";
+  }
+  .dawn-audio-3 {
+    grid-area: dawn-audio-3;
+  }
+  .dawn-called-3 {
+    grid-area: dawn-called-3;
+  }
+  .dawn-song-4 {
+    grid-area: dawn-song-4;
+    grid-template-areas:
+      "dawn-called-4"
+      "dawn-audio-4";
+  }
+  .dawn-audio-4 {
+    grid-area: dawn-audio-4;
+  }
+  .dawn-called-4 {
+    grid-area: dawn-called-4;
+  }
+  .dawn-song-5 {
+    grid-area: dawn-song-5;
+    grid-template-areas:
+      "dawn-called-5"
+      "dawn-audio-5";
+  }
+  .dawn-audio-5 {
+    grid-area: dawn-audio-5;
+  }
+  .dawn-called-5 {
+    grid-area: dawn-called-5;
+  }
+  .dawn-song-6 {
+    grid-area: dawn-song-6;
+    grid-template-areas:
+      "dawn-called-6"
+      "dawn-audio-6";
+  }
+  .dawn-audio-6 {
+    grid-area: dawn-audio-6;
+  }
+  .dawn-called-6 {
+    grid-area: dawn-called-6;
+  }
+
+  /*DUSK SONGS*/
+
+  .dusk-song {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    padding: 8vh 3vw;
+  }
+  .dusk-audio {
+    margin-top: 5vh;
+    justify-self: center;
+  }
+  .dusk-called {
+    color: white;
+    line-height: 600%;
+    text-align: center;
+  }
+  .dusk-song-title {
+    font-family: sloop-script-two, sans-serif;
+    font-size: 9vw;
+    text-shadow: 0px 0px 20px white;
+  }
+  .dusk-artist {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5vw;
+  }
+  .dusk-song-1 {
+    grid-area: dusk-song-1;
+    grid-template-areas:
+      "dusk-called-1"
+      "dusk-audio-1";
+  }
+  .dusk-audio-1 {
+    grid-area: dusk-audio-1;
+  }
+  .dusk-called-1 {
+    grid-area: dusk-called-1;
+  }
+  .dusk-song-2 {
+    grid-area: dusk-song-2;
+    grid-template-areas:
+      "dusk-called-2"
+      "dusk-audio-2";
+  }
+  .dusk-audio-2 {
+    grid-area: dusk-audio-2;
+  }
+  .dusk-called-2 {
+    grid-area: dusk-called-2;
+  }
+  .dusk-song-3 {
+    grid-area: dusk-song-3;
+    grid-template-areas:
+      "dusk-called-3"
+      "dusk-audio-3";
+  }
+  .dusk-audio-3 {
+    grid-area: dusk-audio-3;
+  }
+  .dusk-called-3 {
+    grid-area: dusk-called-3;
+  }
+  .dusk-song-4 {
+    grid-area: dusk-song-4;
+    grid-template-areas:
+      "dusk-called-4"
+      "dusk-audio-4";
+  }
+  .dusk-audio-4 {
+    grid-area: dusk-audio-4;
+  }
+  .dusk-called-4 {
+    grid-area: dusk-called-4;
+  }
+  .dusk-song-5 {
+    grid-area: dusk-song-5;
+    grid-template-areas:
+      "dusk-called-5"
+      "dusk-audio-5";
+  }
+  .dusk-audio-5 {
+    grid-area: dusk-audio-5;
+  }
+  .dusk-called-5 {
+    grid-area: dusk-called-5;
+  }
+  .dusk-song-6 {
+    grid-area: dusk-song-6;
+    grid-template-areas:
+      "dusk-called-6"
+      "dusk-audio-6";
+  }
+  .dusk-audio-6 {
+    grid-area: dusk-audio-6;
+  }
+  .dusk-called-6 {
+    grid-area: dusk-called-6;
+  }
+
+
+  /*DAWN ART*/
+
+  .verse {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    line-height: 200%;
+  }
+  .dawn-art, .dusk-art {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1vw 1vw;
+    padding: 3vw 3vw;
+    color: white;
+  }
+  .dawn-art-1 {
+    grid-area: dawn-art-1;
+  }
+  .dark-moons {
+    background-image: url("dark-moons.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 4;
+  }
+  .nebra-sky-disk {
+    background-image: url("nebra-sky-disk.png");
+    background-size: cover;
+    background-position: center;
+    grid-column: 7 / span 2;
+    grid-row: 5 / span 2;
+  }
+  .freefall {
+    background-image: url("freefall.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 3;
+  }
+  .dawn-art-1-v1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    color: white;
+  }
+  .dawn-art-1-v2 {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 2;
+    color: black;
+    margin-left: 5vw;
+  }
+  .dawn-art-1-v3 {
+    grid-column: 6 / span 2;
+    grid-row: 3 / span 2;
+    color: #f2bf27;  
+  }
+  .dawn-art-1-v4 {
+    font-size: 2.5vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    grid-column: 6 / span 3;
+    grid-row: 2 / span 1;
+    color: #f2921d;
+  }
+  .dawn-art-1-v5 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.2vw;
+    grid-column: 4 / span 5;
+    grid-row: 5 / span 1;
+    color: white;
+  }
+  .dawn-art-1-v6 {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+    color: #f2441d;
+    align-self: flex-end;
+  }
+  .dawn-art-2 {
+    grid-area: dawn-art-2;
+  }
+  .flower-field {
+    background-image: url("flower-field.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5 / span 4;
+    grid-row: 3 / span 4;
+  }
+  .floating {
+    background-image: url("floating.png");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 5;
+  }
+  .fishes {
+    background-image: url("fishes.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .dawn-art-2-v1 {
+    grid-column: 1 / span 7;
+    grid-row: 1 / span 1;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+    margin-left: 2vw;
+    color: black;
+  }
+  .dawn-art-2-v2 {
+    grid-column: 7 / span 2;
+    grid-row: 2 / span 5;
+    color: white;
+  }
+  .dawn-art-2-v3 {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 2;
+    color: red; 
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+  }
+  .dawn-art-2-v4 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 4;
+    color: white;
+    font-size: 1.3vw;
+    align-self: center;
+    margin-left: 2vw;
+  }
+  .dawn-art-2-v5 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.3vw;
+    grid-column: 5 / span 4;
+    grid-row: 6 / span 1;
+    color: white;
+    align-self: flex-end;
+    margin-left: 1vw;
+  }
+  .dawn-art-2-v6 {
+    font-size: 2.2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 2;
+    color: #f2921d;
+    line-height: 100%;
+    align-self: center;
+    margin-left: 2vw;
+  }
+  .dawn-art-2-v7 {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+    color: #f2bf27;
+  }
+  .dawn-art-3 {
+    grid-area: dawn-art-3;
+  }
+  .bright-light {
+    background-image: url("bright-light.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 6;
+  }
+  .angel {
+    background-image: url("angel.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 3;
+  }
+  .two-faces {
+    background-image: url("two-faces.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .dawn-art-3-v1 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    color: #f2441d;
+    margin-left: 1vw;
+  }
+  .dawn-art-3-v5 {
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 4.5vw;
+    color: white;
+    margin-left: 1vw;
+    grid-column: 2 / span 7;
+    grid-row: 6 / span 1;
+    line-height: 120%;
+    margin-bottom: 3vh;
+  }
+  .dawn-art-3-v8 {
+    grid-column: 5 / span 4;
+    grid-row: 3 / span 3;
+    color: red;
+  }
+  .dawn-art-3-v2 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 3;
+    font-size: 1vw;
+    margin-left: 1vw;
+  }
+  .dawn-art-3-v7 {
+    grid-column: 6 / span 3;
+    grid-row: 6 / span 1;
+    align-self: flex-end;
+    line-height: 150%;
+  }
+  .dawn-art-3-v3 {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 6;
+    color: black;
+  }
+  .dawn-art-3-v4 {
+    grid-column: 2 / span 3;
+    grid-row: 5 / span 1;
+    font-size: 1vw;
+    color: yellow;
+  }
+  .dawn-art-3-v6 {
+    grid-column: 7 / span 2;
+    grid-row: 5 / span 2;
+    font-size: 1vw;
+    color: yellow;
+  }
+  .dawn-art-4 {
+    grid-area: dawn-art-4;
+  }
+  .dawn-art-5 {
+    grid-area: dawn-art-5;
+  }
+  .dawn-art-6 {
+    grid-area: dawn-art-6;
+  }
+
+  /*DUSK ART*/
+
+  .dusk-art-1 {
+    grid-area: dusk-art-1;
+  }
+  .gradient {
+    background-image: url("gradient.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 6;
+  }
+  .couple {
+    background-image: url("couple.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 4 / span 3;
+    grid-row: 2 / span 4;
+  }
+  .red-tree {
+    background-image: url("red-tree.png");
+    background-size: cover;
+    background-position: center;
+    grid-column: 6 / span 3;
+    grid-row: 3 / span 4;
+  }
+  .dusk-art-1-v1 {
+    grid-column: 6 / span 3;
+    grid-row: 3 / span 4;
+    font-size: 1vw;
+    color: white;
+    margin-left: 1vw;
+    line-height: 300%;
+  }
+  .dusk-art-1-v6 {
+    font-size: 2.5vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    grid-column: 3 / span 6;
+    grid-row: 5 / span 2;
+    line-height: 120%;
+    align-self: center;
+    color: white;
+  }
+  .dusk-art-1-v7 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+    font-size: 1.3vw;
+    line-height: 120%;
+    margin-left: 1vw;
+    color: #16348c;
+  }
+  .dusk-art-1-v5 {
+    grid-column: 1 / span 7;
+    grid-row: 1 / span 2;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    color: blue;
+    margin-left: 1vw;
+  }
+  .dusk-art-1-v3 {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+    align-self: center;
+    line-height: 120%;
+    color: #0cc8f2;
+    margin-top: 5vh;
+  }
+  .dusk-art-1-v8 {
+    grid-column: 4 / span 3;
+    grid-row: 6 / span 1;
+    font-size: 1.1vw;
+    line-height: 120%;
+    margin-left: 5vw;
+    color: white;
+    align-self: center;
+    justify-self: center;
+  }
+  .dusk-art-1-v2 {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+    margin-left: 1vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
+    color: #091740;
+  }
+  .dusk-art-1-v4 {
+    grid-column: 6 / span 3;
+    grid-row: 2 / span 1;
+  }
+  .dusk-art-2 {
+    grid-area: dusk-art-2;
+  }
+  .windows {
+    background-image: url("windows.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 6;
+  }
+  .star-tree {
+    background-image: url("star-tree.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 4;
+  }
+  .star-walk {
+    background-image: url("star-walk.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 3;
+  }
+  .dusk-art-2-v6 {
+    grid-column: 1 / span 8;
+    grid-row: 5 / span 2;
+    font-size: 2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 1vw;
+  }
+  .dusk-art-2-v4 {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 4;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8vw;
+    color: #0cc8f2;
+    margin-left: 1vw;
+  }
+  .dusk-art-2-v1 {
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 3;
+    font-size: 1.1vw;
+    line-height: 120%;
+  }
+  .dusk-art-2-v3 {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 6;
+    font-size: 1.6vw;
+    line-height: 120%;
+    align-self: center;
+    justify-self: center;
+  }
+  .dusk-art-2-v5 {
+    grid-column: 1 / span 4;
+    grid-row: 6 / span 4;
+    color: #091740;
+    font-size: 1.4vw;
+    line-height: 120%;
+    margin-left: 1vw;
+  }
+  .dusk-art-2-v2 {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 3;
+    font-size: 1.1vw;
+    line-height: 120%;
+    margin-left: 1vw;
+    padding: 1vw 1vw;
+    background-color: #295bf2;
+  }
+  .dusk-art-3 {
+    grid-area: dusk-art-3;
+  }
+  .three-hands {
+    background-image: url("three-hands.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 3 / span 4;
+    grid-row: 1 / span 6;
+  }
+  .ring {
+    background-image: url("ring.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 4;
+  }
+  .bed {
+    background-image: url("bed.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 6 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .dusk-art-3-v5 {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 6;
+    font-size: 4vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: #16348c;
+  }
+  .dusk-art-3-v3 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+    grid-column: 1 / span 8;
+    grid-row: 5 / span 2;
+    align-self: flex-end;
+    color: #0cc8f2;
+  }
+  .dusk-art-3-v4 {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 4;
+    font-size: 2vw;
+    line-height: 150%;
+    margin-left: 1vw;
+    padding: 1vw 1vw;
+    margin-top: 10vh;
+    align-self: center;
+  }
+  .dusk-art-3-v1 {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    font-size: 1.5vw;
+    line-height: 150%;
+    color: white;
+  }
+  .dusk-art-3-v2 {
+    grid-column: 5 / span 2;
+    grid-row: 4 / span 1;
+    font-size: 1.5vw;
+    line-height: 150%;
+    color: #0cc8f2;
+  }
+  .dusk-art-4 {
+    grid-area: dusk-art-4;
+  }
+  .dusk-art-5 {
+    grid-area: dusk-art-5;
+  }
+  .dusk-art-6 {
+    grid-area: dusk-art-6;
+  }
+
+  /*#091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2*/
+  /*  font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 6;
+    color: #f2441d;
+    margin-left: 1vw;*/
+
+  /*DAWN ENDING*/
+
+  .dawn-ending {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("real-sunrise.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .dawn-ending-text, .dusk-ending-text {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: white;
+  }
+
+  /*DUSK ENDING*/
+
+  .dusk-ending {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("real-sunset.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
 }
 
-/*HOME PAGE*/
+/*phone layout*/
 
-.main-container {
-  background-image: linear-gradient(to right, 
-    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black,
-    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
-  color: white;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "q1 q2"
-    "click1 click2";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 8fr 1fr 1fr;
-}
-.header {
-  display: grid;
-  font-family: sloop-script-two, sans-serif;
-  font-size: 15vw;
-  grid-area: header;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
-  text-shadow: 0px 0px 20px white;
-}
-.q1, .q2 {
-  font-size: 2vw;
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  align-self: end;
-}
-.click1, .click2 {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 6vw;
-  margin-bottom: 2.5vh;
-}
-.q1 {
-  grid-area: q1;
-  margin-left: 3vw;
-}
-.q2 {
-  grid-area: q2;
-  justify-self: flex-end;
-  margin-right: 3vw;
-}
-a.click1 {
-  color: white;
-  grid-area: click1;
-  margin-left: 3vw;
-}
-a.click2 {
-  color: white;
-  grid-area: click2;
-  justify-self: flex-end;
-  margin-right: 3vw;
-}
-a.click1:link, a.click1:visited , a.click2:link, a.click2:visited {
-  color: white;
-  text-decoration: none;
-}
-a.click1:hover, a.click2:hover {
-  color: white;
-  text-shadow: 0px 0px 20px white;
-  text-decoration: none;
-}
+@media only screen and (max-width: 600px) {
 
-a.dawn-return:link, a.dusk-return:link, a.dawn-return:visited, a.dusk-return:visited, a.dawn-return:hover, a.dusk-return:hover {
-  color: white;
-  text-decoration: none;
-}
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  iframe {
+    width: 90vw;
+    height: 90vw;
+  }
 
-/*DAWN PAGE*/
+  /*HOME PAGE*/
 
-.dawn-front {
-  background-image: linear-gradient(to left, 
-    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 6fr 4fr 6fr 1fr;
-  grid-template-areas:
-    "dawn-return dawn-return dawn-return"
-    "dawn1 . dawn2"
-    " dawn3 dawn3 dawn3 "
-    "dawn4 dawn5 dawn6"
-    "dawn-click dawn-click dawn-click";
-  gap: 0vw 4vw;
-  padding: 0vw 3vw;
-}
-a.dawn-return {
-  grid-area: dawn-return;
-  font-family: sloop-script-two, sans-serif;
-  font-size: 3vw;
-  justify-self: center;
-  margin-top: 2vh;
-  text-shadow: 0px 0px 20px white;
-  color: white;
-}
-.dawn-type {
-  background-color: white;
-}
-.dawn1 {
-  grid-area: dawn1;
-}
-.dawn2 {
-  grid-area: dawn2;
-}
-.dawn3 {
-  grid-area: dawn3;
-}
-.dawn4 {
-  grid-area: dawn4;
-}
-.dawn5 {
-  grid-area: dawn5;
-}
-.dawn6 {
-  grid-area: dawn6;
-}
-.dawn-name {
-  text-align: center;
-  font-size: 2vw;
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  border-style: solid;
-  border-color: white;
-  border-radius: 3vw;
-}
-.dawn-info {
-  color: white;
-  margin-top: 2vh;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.2vw;
-  line-height: 160%;
-  padding-left: 1vw;
-}
-.dawn-click {
-  grid-area: dawn-click;
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 6vw;
-  margin-bottom: 2.5vh;
-  color: white;
-  text-shadow: 0px 0px 20px white;
-}
+  .main-container {
+    background-image: linear-gradient(
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black,
+      #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "q1"
+      "click1"
+      "header"
+      "q2"
+      "click2";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .header {
+    display: grid;
+    font-family: sloop-script-two, sans-serif;
+    font-size: 18vw;
+    grid-area: header;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0px 0px 20px white;
+    line-height: 90%;
+  }
+  .q1, .q2 {
+    font-size: 3vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-self: flex-end;
+    justify-self: center;
+  }
+  .click1, .click2 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 10vw;
+    align-self: flex-start;
+    justify-self: center;
+  }
+  .q1 {
+    grid-area: q1;
+  }
+  .q2 {
+    grid-area: q2;
+  }
+  a.click1 {
+    color: white;
+    grid-area: click1;
+  }
+  a.click2 {
+    color: white;
+    grid-area: click2;
+  }
+  a.click1:link, a.click1:visited , a.click2:link, a.click2:visited {
+    color: white;
+    text-decoration: none;
+  }
+  a.click1:hover, a.click2:hover {
+    color: white;
+    text-shadow: 0px 0px 20px white;
+    text-decoration: none;
+  }
 
-/*DUSK PAGE*/
+  /*DAWN PAGE*/
 
-.dusk-front {
-  background-image: linear-gradient(to left,
-    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr 6fr 4fr 6fr 1fr;
-  grid-template-areas:
-    "dusk-return dusk-return dusk-return"
-    "dusk1 . dusk2"
-    " dusk3 dusk3 dusk3 "
-    "dusk4 dusk5 dusk6"
-    "dusk-click dusk-click dusk-click";
-  gap: 0vw 4vw;
-  padding: 0vw 3vw;
-}
-a.dusk-return {
-  grid-area: dusk-return;
-  font-family: sloop-script-two, sans-serif;
-  font-size: 3vw;
-  justify-self: center;
-  margin-top: 2vh;
-  text-shadow: 0px 0px 20px white;
-  color: white;
-}
-.dusk-type {
-  background-color: white;
-}
-.dusk1 {
-  grid-area: dusk1;
-}
-.dusk2 {
-  grid-area: dusk2;
-}
-.dusk3 {
-  grid-area: dusk3;
-}
-.dusk4 {
-  grid-area: dusk4;
-}
-.dusk5 {
-  grid-area: dusk5;
-}
-.dusk6 {
-  grid-area: dusk6;
-}
-.dusk-name {
-  text-align: center;
-  font-size: 2vw;
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  border-style: solid;
-  border-color: white;
-  border-radius: 3vw;
-}
-.dusk-info {
-  color: white;
-  margin-top: 2vh;
-  font-family: "ibm-plex-mono", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.2vw;
-  line-height: 160%;
-  padding-left: 1vw;
-}
-.dusk-click {
-  grid-area: dusk-click;
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 6vw;
-  margin-bottom: 2.5vh;
-  color: white;
-  text-shadow: 0px 0px 20px white;
-  justify-self: flex-end;
-}
+  .dawn-front {
+    background-image: linear-gradient(to top,
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black);
+    width: 100vw;
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dawn-click"
+      "dawn1"
+      "dawn2"
+      "dawn3"
+      "dawn4"
+      "dawn5"
+      "dawn6";
+    gap: 0vw 4vw;
+    padding: 0vw 10vw;
+  }
+  .dawn-type {
+    background-color: white;
+  }
+  .dawn1 {
+    grid-area: dawn1;
+  }
+  .dawn2 {
+    grid-area: dawn2;
+  }
+  .dawn3 {
+    grid-area: dawn3;
+  }
+  .dawn4 {
+    grid-area: dawn4;
+  }
+  .dawn5 {
+    grid-area: dawn5;
+  }
+  .dawn6 {
+    grid-area: dawn6;
+  }
+  .dawn-name {
+    text-align: center;
+    font-size: 6vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5vw;
+  }
+  .dawn-info {
+    color: white;
+    margin-top: 2vh;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+    line-height: 160%;
+    padding-left: 1vw;
+  }
+  .dawn-click {
+    grid-area: dawn-click;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vw;
+    margin-top: 2.5vh;
+    color: white;
+    text-shadow: 0px 0px 20px white;
+    text-align: center;
+  }
 
-/*DAWN INTRO*/
+  /*DUSK PAGE*/
 
-.dawn-intro {
-  background-image: linear-gradient(to left, 
-    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05);
-  width: 100vw;
-  height: 125vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "dawn-intro-song dawn-intro-text";
-  gap: 0vw 0vw;
-  padding: 0vw 3vw;
-}
-.dawn-intro-song {
-  grid-area: dawn-intro-song;
-  align-self: center;
-  margin-bottom: 25vh;
-}
-.dawn-intro-text {
-  grid-area: dawn-intro-text;
-  font-size: 1.5vw;
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  margin-right: 6vw;
-  line-height: 200%;
-}
+  .dusk-front {
+    background-image: linear-gradient(to top,
+      black, #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    width: 100vw;
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dusk-click"
+      "dusk1"
+      "dusk2"
+      "dusk3"
+      "dusk4"
+      "dusk5"
+      "dusk6";
+    gap: 0vw 4vw;
+    padding: 0vw 10vw;
+  }
+  .dusk-type {
+    background-color: white;
+  }
+  .dusk1 {
+    grid-area: dusk1;
+  }
+  .dusk2 {
+    grid-area: dusk2;
+  }
+  .dusk3 {
+    grid-area: dusk3;
+  }
+  .dusk4 {
+    grid-area: dusk4;
+  }
+  .dusk5 {
+    grid-area: dusk5;
+  }
+  .dusk6 {
+    grid-area: dusk6;
+  }
+  .dusk-name {
+    text-align: center;
+    font-size: 6vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5vw;
+  }
+  .dusk-info {
+    color: white;
+    margin-top: 2vh;
+    font-family: "ibm-plex-mono", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+    line-height: 160%;
+  }
+  .dusk-click {
+    grid-area: dusk-click;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vw;
+    margin-top: 2.5vh;
+    color: white;
+    text-shadow: 0px 0px 20px white;
+    text-align: center;
+  }
 
-/*DUSK INTRO*/
+  /*DAWN INTRO*/
 
-.dusk-intro {
-  background-image: linear-gradient(to left,
-    #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
-  width: 100vw;
-  height: 125vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "dusk-intro-text dusk-intro-song";
-  gap: 0vw 0vw;
-  padding: 0vw 3vw;
-}
-.dusk-intro-song {
-  grid-area: dusk-intro-song;
-  align-self: center;
-  justify-self: flex-end;
-  margin-bottom: 25vh;
-}
-.dusk-intro-text {
-  grid-area: dusk-intro-text;
-  font-size: 1.5vw;
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  margin-left: 6vw;
-  line-height: 200%;
-}
+  .dawn-intro {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dawn-intro-song"
+      "dawn-intro-text";
+  }
+  .dawn-intro-song {
+    grid-area: dawn-intro-song;
+    justify-self: center;
+    margin-top: 3vh;
+  }
+  .dawn-intro-text {
+    padding: 0vw 15vw;
+    grid-area: dawn-intro-text;
+    font-size: 3vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    line-height: 200%;
+  }
 
-/*DAWN TRANSITION*/
+  /*DUSK INTRO*/
 
-.dawn-transition {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("anime-sunrise.gif");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.dawn-transition-text, .dusk-transition-text {
-  font-family: ibm-plex-mono, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3vw;
-  text-align: center;
-  margin-bottom: 5vh;
-  color: white;
-}
+  .dusk-intro {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dusk-intro-song"
+      "dusk-intro-text";
+  }
+  .dusk-intro-song {
+    grid-area: dusk-intro-song;
+    justify-self: center;
+    margin-top: 3vh;
+  }
+  .dusk-intro-text {
+    padding: 0vw 15vw;
+    grid-area: dusk-intro-text;
+    font-size: 3vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    line-height: 200%;
+  }
 
-/*DUSK TRANSITION*/
+  /*DAWN TRANSITION*/
 
-.dusk-transition {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("anime-sunset.gif");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
+  .dawn-transition {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("anime-sunrise.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .dawn-transition-text, .dusk-transition-text {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7vw;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: white;
+  }
 
-/*DAWN PLAYLIST*/
+  /*DUSK TRANSITION*/
 
-.dawn-playlist {
-  background-image: linear-gradient(to top,
-    #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black);
-  width: 100vw;
-  height: 700vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-areas:
-    "spacing"
-    "dawn-song-1"
-    "dawn-art-1"
-    "dawn-song-2"
-    "dawn-art-2"
-    "dawn-song-3"
-    "dawn-art-3"
-    /*"dawn-song-4"
-    "dawn-art-4"
-    "dawn-song-5"
-    "dawn-art-5"
-    "dawn-song-6"
-    "dawn-art-6";*/
-}
+  .dusk-transition {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("anime-sunset.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
 
-/*DUSK PLAYLIST*/
+  /*DAWN PLAYLIST*/
 
-.dusk-playlist {
-  background-image: linear-gradient(to top,
-    black, #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
-  width: 100vw;
-  height: 700vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-areas:
-    "spacing"
-    "dusk-song-1"
-    "dusk-art-1"
-    "dusk-song-2"
-    "dusk-art-2"
-    "dusk-song-3"
-    "dusk-art-3"
-    /*"dusk-song-4"
-    "dusk-art-4"
-    "dusk-song-5"
-    "dusk-art-5"
-    "dusk-song-6"
-    "dusk-art-6";*/
-}
-.spacing {
-  grid-area: spacing;
-  width: 100vw;
-  height: 25vh;
-  display: grid;
-}
+  .dawn-playlist {
+    background-image: linear-gradient(to top,
+      #f2bf27, #f2921d, #f26b1d, #f2441d, #79220e, #300d05, black);
+    width: 100vw;
+    height: 400vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dawn-song-1"
+      "dawn-art-1"
+      "dawn-song-2"
+      "dawn-art-2"
+      "dawn-song-3"
+      "dawn-art-3"
+      /*"dawn-song-4"
+      "dawn-art-4"
+      "dawn-song-5"
+      "dawn-art-5"
+      "dawn-song-6"
+      "dawn-art-6";*/
+  }
 
-/*DAWN SONGS*/
+  /*DUSK PLAYLIST*/
 
-.dawn-song {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  padding: 8vh 3vw;*/
-}
-.dawn-audio {
-  margin-top: 5vh;
-  justify-self: center;
-}
-.dawn-called {
-  color: white;
-  line-height: 600%;
-  text-align: center;
-}
-.dawn-song-title {
-  font-family: sloop-script-two, sans-serif;
-  font-size: 9vw;
-  text-shadow: 0px 0px 20px white;
-}
-.dawn-artist {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.5vw;
-}
-.dawn-song-1 {
-  grid-area: dawn-song-1;
-  grid-template-areas:
-    "dawn-called-1"
-    "dawn-audio-1";
-}
-.dawn-audio-1 {
-  grid-area: dawn-audio-1;
-}
-.dawn-called-1 {
-  grid-area: dawn-called-1;
-}
-.dawn-song-2 {
-  grid-area: dawn-song-2;
-  grid-template-areas:
-    "dawn-called-2"
-    "dawn-audio-2";
-}
-.dawn-audio-2 {
-  grid-area: dawn-audio-2;
-}
-.dawn-called-2 {
-  grid-area: dawn-called-2;
-}
-.dawn-song-3 {
-  grid-area: dawn-song-3;
-  grid-template-areas:
-    "dawn-called-3"
-    "dawn-audio-3";
-}
-.dawn-audio-3 {
-  grid-area: dawn-audio-3;
-}
-.dawn-called-3 {
-  grid-area: dawn-called-3;
-}
-.dawn-song-4 {
-  grid-area: dawn-song-4;
-  grid-template-areas:
-    "dawn-called-4"
-    "dawn-audio-4";
-}
-.dawn-audio-4 {
-  grid-area: dawn-audio-4;
-}
-.dawn-called-4 {
-  grid-area: dawn-called-4;
-}
-.dawn-song-5 {
-  grid-area: dawn-song-5;
-  grid-template-areas:
-    "dawn-called-5"
-    "dawn-audio-5";
-}
-.dawn-audio-5 {
-  grid-area: dawn-audio-5;
-}
-.dawn-called-5 {
-  grid-area: dawn-called-5;
-}
-.dawn-song-6 {
-  grid-area: dawn-song-6;
-  grid-template-areas:
-    "dawn-called-6"
-    "dawn-audio-6";
-}
-.dawn-audio-6 {
-  grid-area: dawn-audio-6;
-}
-.dawn-called-6 {
-  grid-area: dawn-called-6;
-}
+  .dusk-playlist {
+    background-image: linear-gradient(to top,
+      black, #091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2);
+    width: 100vw;
+    height: 400vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "dusk-song-1"
+      "dusk-art-1"
+      "dusk-song-2"
+      "dusk-art-2"
+      "dusk-song-3"
+      "dusk-art-3"
+      /*"dusk-song-4"
+      "dusk-art-4"
+      "dusk-song-5"
+      "dusk-art-5"
+      "dusk-song-6"
+      "dusk-art-6";*/
+  }
 
-/*DUSK SONGS*/
+  /*DAWN SONGS*/
 
-.dusk-song {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  padding: 8vh 3vw;
-}
-.dusk-audio {
-  margin-top: 5vh;
-  justify-self: center;
-}
-.dusk-called {
-  color: white;
-  line-height: 600%;
-  text-align: center;
-}
-.dusk-song-title {
-  font-family: sloop-script-two, sans-serif;
-  font-size: 9vw;
-  text-shadow: 0px 0px 20px white;
-}
-.dusk-artist {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.5vw;
-}
-.dusk-song-1 {
-  grid-area: dusk-song-1;
-  grid-template-areas:
-    "dusk-called-1"
-    "dusk-audio-1";
-}
-.dusk-audio-1 {
-  grid-area: dusk-audio-1;
-}
-.dusk-called-1 {
-  grid-area: dusk-called-1;
-}
-.dusk-song-2 {
-  grid-area: dusk-song-2;
-  grid-template-areas:
-    "dusk-called-2"
-    "dusk-audio-2";
-}
-.dusk-audio-2 {
-  grid-area: dusk-audio-2;
-}
-.dusk-called-2 {
-  grid-area: dusk-called-2;
-}
-.dusk-song-3 {
-  grid-area: dusk-song-3;
-  grid-template-areas:
-    "dusk-called-3"
-    "dusk-audio-3";
-}
-.dusk-audio-3 {
-  grid-area: dusk-audio-3;
-}
-.dusk-called-3 {
-  grid-area: dusk-called-3;
-}
-.dusk-song-4 {
-  grid-area: dusk-song-4;
-  grid-template-areas:
-    "dusk-called-4"
-    "dusk-audio-4";
-}
-.dusk-audio-4 {
-  grid-area: dusk-audio-4;
-}
-.dusk-called-4 {
-  grid-area: dusk-called-4;
-}
-.dusk-song-5 {
-  grid-area: dusk-song-5;
-  grid-template-areas:
-    "dusk-called-5"
-    "dusk-audio-5";
-}
-.dusk-audio-5 {
-  grid-area: dusk-audio-5;
-}
-.dusk-called-5 {
-  grid-area: dusk-called-5;
-}
-.dusk-song-6 {
-  grid-area: dusk-song-6;
-  grid-template-areas:
-    "dusk-called-6"
-    "dusk-audio-6";
-}
-.dusk-audio-6 {
-  grid-area: dusk-audio-6;
-}
-.dusk-called-6 {
-  grid-area: dusk-called-6;
-}
+  .dawn-song {
+    width: 100vw;
+    height: 66vh;
+    display: grid;
+    justify-self: center;
+    margin-top: 3vh;
+  }
+  .dawn-audio {
+    justify-self: center;
+  }
+  .dawn-called {
+    color: white;
+    text-align: center;
+  }
+  .dawn-song-title {
+    font-family: sloop-script-two, sans-serif;
+    font-size: 12vw;
+    text-shadow: 0px 0px 20px white;
+  }
+  .dawn-artist {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    margin-top: 2vh;
+  }
+  .dawn-song-1 {
+    grid-area: dawn-song-1;
+    grid-template-areas:
+      "dawn-called-1"
+      "dawn-audio-1";
+  }
+  .dawn-audio-1 {
+    grid-area: dawn-audio-1;
+  }
+  .dawn-called-1 {
+    grid-area: dawn-called-1;
+  }
+  .dawn-song-2 {
+    grid-area: dawn-song-2;
+    grid-template-areas:
+      "dawn-called-2"
+      "dawn-audio-2";
+  }
+  .dawn-audio-2 {
+    grid-area: dawn-audio-2;
+  }
+  .dawn-called-2 {
+    grid-area: dawn-called-2;
+  }
+  .dawn-song-3 {
+    grid-area: dawn-song-3;
+    grid-template-areas:
+      "dawn-called-3"
+      "dawn-audio-3";
+  }
+  .dawn-audio-3 {
+    grid-area: dawn-audio-3;
+  }
+  .dawn-called-3 {
+    grid-area: dawn-called-3;
+  }
+  .dawn-song-4 {
+    grid-area: dawn-song-4;
+    grid-template-areas:
+      "dawn-called-4"
+      "dawn-audio-4";
+  }
+  .dawn-audio-4 {
+    grid-area: dawn-audio-4;
+  }
+  .dawn-called-4 {
+    grid-area: dawn-called-4;
+  }
+  .dawn-song-5 {
+    grid-area: dawn-song-5;
+    grid-template-areas:
+      "dawn-called-5"
+      "dawn-audio-5";
+  }
+  .dawn-audio-5 {
+    grid-area: dawn-audio-5;
+  }
+  .dawn-called-5 {
+    grid-area: dawn-called-5;
+  }
+  .dawn-song-6 {
+    grid-area: dawn-song-6;
+    grid-template-areas:
+      "dawn-called-6"
+      "dawn-audio-6";
+  }
+  .dawn-audio-6 {
+    grid-area: dawn-audio-6;
+  }
+  .dawn-called-6 {
+    grid-area: dawn-called-6;
+  }
 
+  /*DUSK SONGS*/
 
-/*DAWN ART*/
+  .dusk-song {
+    width: 100vw;
+    height: 66vh;
+    display: grid;
+    justify-self: center;
+    margin-top: 3vh;
+  }
+  .dusk-audio {
+    justify-self: center;
+  }
+  .dusk-called {
+    color: white;
+    text-align: center;
+  }
+  .dusk-song-title {
+    font-family: sloop-script-two, sans-serif;
+    font-size: 12vw;
+    text-shadow: 0px 0px 20px white;
+  }
+  .dusk-artist {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    margin-top: 2vh;
+  }
+  .dusk-song-1 {
+    grid-area: dusk-song-1;
+    grid-template-areas:
+      "dusk-called-1"
+      "dusk-audio-1";
+  }
+  .dusk-audio-1 {
+    grid-area: dusk-audio-1;
+  }
+  .dusk-called-1 {
+    grid-area: dusk-called-1;
+  }
+  .dusk-song-2 {
+    grid-area: dusk-song-2;
+    grid-template-areas:
+      "dusk-called-2"
+      "dusk-audio-2";
+  }
+  .dusk-audio-2 {
+    grid-area: dusk-audio-2;
+  }
+  .dusk-called-2 {
+    grid-area: dusk-called-2;
+  }
+  .dusk-song-3 {
+    grid-area: dusk-song-3;
+    grid-template-areas:
+      "dusk-called-3"
+      "dusk-audio-3";
+  }
+  .dusk-audio-3 {
+    grid-area: dusk-audio-3;
+  }
+  .dusk-called-3 {
+    grid-area: dusk-called-3;
+  }
+  .dusk-song-4 {
+    grid-area: dusk-song-4;
+    grid-template-areas:
+      "dusk-called-4"
+      "dusk-audio-4";
+  }
+  .dusk-audio-4 {
+    grid-area: dusk-audio-4;
+  }
+  .dusk-called-4 {
+    grid-area: dusk-called-4;
+  }
+  .dusk-song-5 {
+    grid-area: dusk-song-5;
+    grid-template-areas:
+      "dusk-called-5"
+      "dusk-audio-5";
+  }
+  .dusk-audio-5 {
+    grid-area: dusk-audio-5;
+  }
+  .dusk-called-5 {
+    grid-area: dusk-called-5;
+  }
+  .dusk-song-6 {
+    grid-area: dusk-song-6;
+    grid-template-areas:
+      "dusk-called-6"
+      "dusk-audio-6";
+  }
+  .dusk-audio-6 {
+    grid-area: dusk-audio-6;
+  }
+  .dusk-called-6 {
+    grid-area: dusk-called-6;
+  }
 
-.verse {
-  font-family: ibm-plex-mono, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5vw;
-  line-height: 200%;
-}
-.dawn-art, .dusk-art {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 1vw 1vw;
-  padding: 3vw 3vw;
-  color: white;
-}
-.dawn-art-1 {
-  grid-area: dawn-art-1;
-}
-.dark-moons {
-  background-image: url("dark-moons.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 2 / span 4;
-  grid-row: 1 / span 4;
-}
-.nebra-sky-disk {
-  background-image: url("nebra-sky-disk.png");
-  background-size: cover;
-  background-position: center;
-  grid-column: 7 / span 2;
-  grid-row: 5 / span 2;
-}
-.freefall {
-  background-image: url("freefall.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1 / span 2;
-  grid-row: 4 / span 3;
-}
-.dawn-art-1-v1 {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-  color: white;
-}
-.dawn-art-1-v2 {
-  grid-column: 2 / span 2;
-  grid-row: 5 / span 2;
-  color: black;
-  margin-left: 5vw;
-}
-.dawn-art-1-v3 {
-  grid-column: 6 / span 2;
-  grid-row: 3 / span 2;
-  color: #f2bf27;  
-}
-.dawn-art-1-v4 {
-  font-size: 2.5vw;
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  grid-column: 6 / span 3;
-  grid-row: 2 / span 1;
-  color: #f2921d;
-}
-.dawn-art-1-v5 {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2.2vw;
-  grid-column: 4 / span 5;
-  grid-row: 5 / span 1;
-  color: white;
-}
-.dawn-art-1-v6 {
-  grid-column: 3 / span 2;
-  grid-row: 6 / span 1;
-  color: #f2441d;
-  align-self: flex-end;
-}
-.dawn-art-2 {
-  grid-area: dawn-art-2;
-}
-.flower-field {
-  background-image: url("flower-field.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 5 / span 4;
-  grid-row: 3 / span 4;
-}
-.floating {
-  background-image: url("floating.png");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1 / span 6;
-  grid-row: 1 / span 5;
-}
-.fishes {
-  background-image: url("fishes.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 2 / span 3;
-  grid-row: 4 / span 3;
-}
-.dawn-art-2-v1 {
-  grid-column: 1 / span 7;
-  grid-row: 1 / span 1;
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 3vw;
-  margin-left: 2vw;
-  color: black;
-}
-.dawn-art-2-v2 {
-  grid-column: 7 / span 2;
-  grid-row: 2 / span 5;
-  color: white;
-}
-.dawn-art-2-v3 {
-  grid-column: 5 / span 2;
-  grid-row: 2 / span 2;
-  color: red; 
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal; 
-  font-size: 2vw;
-  margin-left: 2vw;
-  margin-top: 2vh;
-}
-.dawn-art-2-v4 {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 4;
-  color: white;
-  font-size: 1.3vw;
-  align-self: center;
-  margin-left: 2vw;
-}
-.dawn-art-2-v5 {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 3.3vw;
-  grid-column: 5 / span 4;
-  grid-row: 6 / span 1;
-  color: white;
-  align-self: flex-end;
-  margin-left: 1vw;
-}
-.dawn-art-2-v6 {
-  font-size: 2.2vw;
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  grid-column: 1 / span 4;
-  grid-row: 2 / span 2;
-  color: #f2921d;
-  line-height: 100%;
-  align-self: center;
-  margin-left: 2vw;
-}
-.dawn-art-2-v7 {
-  grid-column: 3 / span 2;
-  grid-row: 6 / span 1;
-  color: #f2bf27;
-}
-.dawn-art-3 {
-  grid-area: dawn-art-3;
-}
-.bright-light {
-  background-image: url("bright-light.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1 / span 5;
-  grid-row: 1 / span 6;
-}
-.angel {
-  background-image: url("angel.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 7 / span 2;
-  grid-row: 1 / span 3;
-}
-.two-faces {
-  background-image: url("two-faces.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 5 / span 3;
-  grid-row: 4 / span 3;
-}
-.dawn-art-3-v1 {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2vw;
-  grid-column: 1 / span 3;
-  grid-row: 1 / span 1;
-  color: #f2441d;
-  margin-left: 1vw;
-}
-.dawn-art-3-v5 {
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 4.5vw;
-  color: white;
-  margin-left: 1vw;
-  grid-column: 2 / span 7;
-  grid-row: 6 / span 1;
-  line-height: 120%;
-  margin-bottom: 3vh;
-}
-.dawn-art-3-v8 {
-  grid-column: 5 / span 4;
-  grid-row: 3 / span 3;
-  color: red;
-}
-.dawn-art-3-v2 {
-  grid-column: 1 / span 4;
-  grid-row: 2 / span 3;
-  font-size: 1vw;
-  margin-left: 1vw;
-}
-.dawn-art-3-v7 {
-  grid-column: 6 / span 3;
-  grid-row: 6 / span 1;
-  align-self: flex-end;
-  line-height: 150%;
-}
-.dawn-art-3-v3 {
-  grid-column: 6 / span 3;
-  grid-row: 1 / span 6;
-  color: black;
-}
-.dawn-art-3-v4 {
-  grid-column: 2 / span 3;
-  grid-row: 5 / span 1;
-  font-size: 1vw;
-  color: yellow;
-}
-.dawn-art-3-v6 {
-  grid-column: 7 / span 2;
-  grid-row: 5 / span 2;
-  font-size: 1vw;
-  color: yellow;
-}
-.dawn-art-4 {
-  grid-area: dawn-art-4;
-}
-.dawn-art-5 {
-  grid-area: dawn-art-5;
-}
-.dawn-art-6 {
-  grid-area: dawn-art-6;
-}
+  /*DAWN ART*/
 
-/*DUSK ART*/
+  .verse {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    line-height: 200%;
+  }
+  .dawn-art, .dusk-art {
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1vw 1vw;
+    padding: 3vw 3vw;
+    color: white;
+  }
+  .dawn-art-1 {
+    grid-area: dawn-art-1;
+  }
+  .dark-moons {
+    background-image: url("dark-moons.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 4;
+  }
+  .nebra-sky-disk {
+    background-image: url("nebra-sky-disk.png");
+    background-size: cover;
+    background-position: center;
+    grid-column: 7 / span 2;
+    grid-row: 5 / span 2;
+  }
+  .freefall {
+    background-image: url("freefall.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 3;
+  }
+  .dawn-art-1-v1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    color: white;
+  }
+  .dawn-art-1-v2 {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 2;
+    color: black;
+    margin-left: 5vw;
+  }
+  .dawn-art-1-v3 {
+    grid-column: 6 / span 2;
+    grid-row: 3 / span 2;
+    color: #f2bf27;  
+  }
+  .dawn-art-1-v4 {
+    font-size: 2.5vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    grid-column: 6 / span 3;
+    grid-row: 2 / span 1;
+    color: #f2921d;
+  }
+  .dawn-art-1-v5 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.2vw;
+    grid-column: 4 / span 5;
+    grid-row: 5 / span 1;
+    color: white;
+  }
+  .dawn-art-1-v6 {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+    color: #f2441d;
+    align-self: flex-end;
+  }
+  .dawn-art-2 {
+    grid-area: dawn-art-2;
+  }
+  .flower-field {
+    background-image: url("flower-field.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5 / span 4;
+    grid-row: 3 / span 4;
+  }
+  .floating {
+    background-image: url("floating.png");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 5;
+  }
+  .fishes {
+    background-image: url("fishes.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .dawn-art-2-v1 {
+    grid-column: 1 / span 7;
+    grid-row: 1 / span 1;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+    margin-left: 2vw;
+    color: black;
+  }
+  .dawn-art-2-v2 {
+    grid-column: 7 / span 2;
+    grid-row: 2 / span 5;
+    color: white;
+  }
+  .dawn-art-2-v3 {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 2;
+    color: red; 
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+  }
+  .dawn-art-2-v4 {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 4;
+    color: white;
+    font-size: 1.3vw;
+    align-self: center;
+    margin-left: 2vw;
+  }
+  .dawn-art-2-v5 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.3vw;
+    grid-column: 5 / span 4;
+    grid-row: 6 / span 1;
+    color: white;
+    align-self: flex-end;
+    margin-left: 1vw;
+  }
+  .dawn-art-2-v6 {
+    font-size: 2.2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 2;
+    color: #f2921d;
+    line-height: 100%;
+    align-self: center;
+    margin-left: 2vw;
+  }
+  .dawn-art-2-v7 {
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+    color: #f2bf27;
+  }
+  .dawn-art-3 {
+    grid-area: dawn-art-3;
+  }
+  .bright-light {
+    background-image: url("bright-light.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 6;
+  }
+  .angel {
+    background-image: url("angel.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 3;
+  }
+  .two-faces {
+    background-image: url("two-faces.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .dawn-art-3-v1 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    color: #f2441d;
+    margin-left: 1vw;
+  }
+  .dawn-art-3-v5 {
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 4.5vw;
+    color: white;
+    margin-left: 1vw;
+    grid-column: 2 / span 7;
+    grid-row: 6 / span 1;
+    line-height: 120%;
+    margin-bottom: 3vh;
+  }
+  .dawn-art-3-v8 {
+    grid-column: 5 / span 4;
+    grid-row: 3 / span 3;
+    color: red;
+  }
+  .dawn-art-3-v2 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 3;
+    font-size: 1vw;
+    margin-left: 1vw;
+  }
+  .dawn-art-3-v7 {
+    grid-column: 6 / span 3;
+    grid-row: 6 / span 1;
+    align-self: flex-end;
+    line-height: 150%;
+  }
+  .dawn-art-3-v3 {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 6;
+    color: black;
+  }
+  .dawn-art-3-v4 {
+    grid-column: 2 / span 3;
+    grid-row: 5 / span 1;
+    font-size: 1vw;
+    color: yellow;
+  }
+  .dawn-art-3-v6 {
+    grid-column: 7 / span 2;
+    grid-row: 5 / span 2;
+    font-size: 1vw;
+    color: yellow;
+  }
+  .dawn-art-4 {
+    grid-area: dawn-art-4;
+  }
+  .dawn-art-5 {
+    grid-area: dawn-art-5;
+  }
+  .dawn-art-6 {
+    grid-area: dawn-art-6;
+  }
 
-.dusk-art-1 {
-  grid-area: dusk-art-1;
-}
-.gradient {
-  background-image: url("gradient.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 6;
-}
-.couple {
-  background-image: url("couple.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 4 / span 3;
-  grid-row: 2 / span 4;
-}
-.red-tree {
-  background-image: url("red-tree.png");
-  background-size: cover;
-  background-position: center;
-  grid-column: 6 / span 3;
-  grid-row: 3 / span 4;
-}
-.dusk-art-1-v1 {
-  grid-column: 6 / span 3;
-  grid-row: 3 / span 4;
-  font-size: 1vw;
-  color: white;
-  margin-left: 1vw;
-  line-height: 300%;
-}
-.dusk-art-1-v6 {
-  font-size: 2.5vw;
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  grid-column: 3 / span 6;
-  grid-row: 5 / span 2;
-  line-height: 120%;
-  align-self: center;
-  color: white;
-}
-.dusk-art-1-v7 {
-  grid-column: 1 / span 2;
-  grid-row: 5 / span 2;
-  font-size: 1.3vw;
-  line-height: 120%;
-  margin-left: 1vw;
-  color: #16348c;
-}
-.dusk-art-1-v5 {
-  grid-column: 1 / span 7;
-  grid-row: 1 / span 2;
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2vw;
-  color: blue;
-  margin-left: 1vw;
-}
-.dusk-art-1-v3 {
-  grid-column: 3 / span 2;
-  grid-row: 2 / span 2;
-  align-self: center;
-  line-height: 120%;
-  color: #0cc8f2;
-  margin-top: 5vh;
-}
-.dusk-art-1-v8 {
-  grid-column: 4 / span 3;
-  grid-row: 6 / span 1;
-  font-size: 1.1vw;
-  line-height: 120%;
-  margin-left: 5vw;
-  color: white;
-  align-self: center;
-  justify-self: center;
-}
-.dusk-art-1-v2 {
-  grid-column: 1 / span 3;
-  grid-row: 4 / span 1;
-  margin-left: 1vw;
-  font-family: obviously, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2vw;
-  color: #091740;
-}
-.dusk-art-1-v4 {
-  grid-column: 6 / span 3;
-  grid-row: 2 / span 1;
-}
-.dusk-art-2 {
-  grid-area: dusk-art-2;
-}
-.windows {
-  background-image: url("windows.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 5 / span 4;
-  grid-row: 1 / span 6;
-}
-.star-tree {
-  background-image: url("star-tree.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1 / span 3;
-  grid-row: 1 / span 4;
-}
-.star-walk {
-  background-image: url("star-walk.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 3 / span 2;
-  grid-row: 3 / span 3;
-}
-.dusk-art-2-v6 {
-  grid-column: 1 / span 8;
-  grid-row: 5 / span 2;
-  font-size: 2vw;
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  margin-left: 1vw;
-}
-.dusk-art-2-v4 {
-  grid-column: 1 / span 8;
-  grid-row: 1 / span 4;
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.8vw;
-  color: #0cc8f2;
-  margin-left: 1vw;
-}
-.dusk-art-2-v1 {
-  grid-column: 2 / span 3;
-  grid-row: 2 / span 3;
-  font-size: 1.1vw;
-  line-height: 120%;
-}
-.dusk-art-2-v3 {
-  grid-column: 7 / span 2;
-  grid-row: 1 / span 6;
-  font-size: 1.6vw;
-  line-height: 120%;
-  align-self: center;
-  justify-self: center;
-}
-.dusk-art-2-v5 {
-  grid-column: 1 / span 4;
-  grid-row: 6 / span 4;
-  color: #091740;
-  font-size: 1.4vw;
-  line-height: 120%;
-  margin-left: 1vw;
-}
-.dusk-art-2-v2 {
-  grid-column: 5 / span 2;
-  grid-row: 2 / span 3;
-  font-size: 1.1vw;
-  line-height: 120%;
-  margin-left: 1vw;
-  padding: 1vw 1vw;
-  background-color: #295bf2;
-}
-.dusk-art-3 {
-  grid-area: dusk-art-3;
-}
-.three-hands {
-  background-image: url("three-hands.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 3 / span 4;
-  grid-row: 1 / span 6;
-}
-.ring {
-  background-image: url("ring.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 1 / span 3;
-  grid-row: 2 / span 4;
-}
-.bed {
-  background-image: url("bed.jpeg");
-  background-size: cover;
-  background-position: center;
-  grid-column: 6 / span 3;
-  grid-row: 4 / span 3;
-}
-.dusk-art-3-v5 {
-  grid-column: 7 / span 2;
-  grid-row: 1 / span 6;
-  font-size: 4vw;
-  font-family: obviously, sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  text-align: center;
-  color: #16348c;
-}
-.dusk-art-3-v3 {
-  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 3vw;
-  grid-column: 1 / span 8;
-  grid-row: 5 / span 2;
-  align-self: flex-end;
-  color: #0cc8f2;
-}
-.dusk-art-3-v4 {
-  grid-column: 1 / span 3;
-  grid-row: 2 / span 4;
-  font-size: 2vw;
-  line-height: 150%;
-  margin-left: 1vw;
-  padding: 1vw 1vw;
-  margin-top: 10vh;
-  align-self: center;
-}
-.dusk-art-3-v1 {
-  grid-column: 2 / span 2;
-  grid-row: 1 / span 1;
-  font-size: 1.5vw;
-  line-height: 150%;
-  color: white;
-}
-.dusk-art-3-v2 {
-  grid-column: 5 / span 2;
-  grid-row: 4 / span 1;
-  font-size: 1.5vw;
-  line-height: 150%;
-  color: #0cc8f2;
-}
-.dusk-art-4 {
-  grid-area: dusk-art-4;
-}
-.dusk-art-5 {
-  grid-area: dusk-art-5;
-}
-.dusk-art-6 {
-  grid-area: dusk-art-6;
-}
+  /*DUSK ART*/
 
-/*#091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2*/
-/*  font-family: obviously-extended, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 2vw;
-  grid-column: 1 / span 8;
-  grid-row: 1 / span 6;
-  color: #f2441d;
-  margin-left: 1vw;*/
+  .dusk-art-1 {
+    grid-area: dusk-art-1;
+  }
+  .gradient {
+    background-image: url("gradient.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 6;
+  }
+  .couple {
+    background-image: url("couple.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 4 / span 3;
+    grid-row: 2 / span 4;
+  }
+  .red-tree {
+    background-image: url("red-tree.png");
+    background-size: cover;
+    background-position: center;
+    grid-column: 6 / span 3;
+    grid-row: 3 / span 4;
+  }
+  .dusk-art-1-v1 {
+    grid-column: 6 / span 3;
+    grid-row: 3 / span 4;
+    font-size: 1vw;
+    color: white;
+    margin-left: 1vw;
+    line-height: 300%;
+  }
+  .dusk-art-1-v6 {
+    font-size: 2.5vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    grid-column: 3 / span 6;
+    grid-row: 5 / span 2;
+    line-height: 120%;
+    align-self: center;
+    color: white;
+  }
+  .dusk-art-1-v7 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+    font-size: 1.3vw;
+    line-height: 120%;
+    margin-left: 1vw;
+    color: #16348c;
+  }
+  .dusk-art-1-v5 {
+    grid-column: 1 / span 7;
+    grid-row: 1 / span 2;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    color: blue;
+    margin-left: 1vw;
+  }
+  .dusk-art-1-v3 {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+    align-self: center;
+    line-height: 120%;
+    color: #0cc8f2;
+    margin-top: 5vh;
+  }
+  .dusk-art-1-v8 {
+    grid-column: 4 / span 3;
+    grid-row: 6 / span 1;
+    font-size: 1.1vw;
+    line-height: 120%;
+    margin-left: 5vw;
+    color: white;
+    align-self: center;
+    justify-self: center;
+  }
+  .dusk-art-1-v2 {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+    margin-left: 1vw;
+    font-family: obviously, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vw;
+    color: #091740;
+  }
+  .dusk-art-1-v4 {
+    grid-column: 6 / span 3;
+    grid-row: 2 / span 1;
+  }
+  .dusk-art-2 {
+    grid-area: dusk-art-2;
+  }
+  .windows {
+    background-image: url("windows.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 6;
+  }
+  .star-tree {
+    background-image: url("star-tree.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 4;
+  }
+  .star-walk {
+    background-image: url("star-walk.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 3;
+  }
+  .dusk-art-2-v6 {
+    grid-column: 1 / span 8;
+    grid-row: 5 / span 2;
+    font-size: 2vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 1vw;
+  }
+  .dusk-art-2-v4 {
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 4;
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8vw;
+    color: #0cc8f2;
+    margin-left: 1vw;
+  }
+  .dusk-art-2-v1 {
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 3;
+    font-size: 1.1vw;
+    line-height: 120%;
+  }
+  .dusk-art-2-v3 {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 6;
+    font-size: 1.6vw;
+    line-height: 120%;
+    align-self: center;
+    justify-self: center;
+  }
+  .dusk-art-2-v5 {
+    grid-column: 1 / span 4;
+    grid-row: 6 / span 4;
+    color: #091740;
+    font-size: 1.4vw;
+    line-height: 120%;
+    margin-left: 1vw;
+  }
+  .dusk-art-2-v2 {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 3;
+    font-size: 1.1vw;
+    line-height: 120%;
+    margin-left: 1vw;
+    padding: 1vw 1vw;
+    background-color: #295bf2;
+  }
+  .dusk-art-3 {
+    grid-area: dusk-art-3;
+  }
+  .three-hands {
+    background-image: url("three-hands.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 3 / span 4;
+    grid-row: 1 / span 6;
+  }
+  .ring {
+    background-image: url("ring.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 4;
+  }
+  .bed {
+    background-image: url("bed.jpeg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 6 / span 3;
+    grid-row: 4 / span 3;
+  }
+  .dusk-art-3-v5 {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 6;
+    font-size: 4vw;
+    font-family: obviously, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: #16348c;
+  }
+  .dusk-art-3-v3 {
+    font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+    grid-column: 1 / span 8;
+    grid-row: 5 / span 2;
+    align-self: flex-end;
+    color: #0cc8f2;
+  }
+  .dusk-art-3-v4 {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 4;
+    font-size: 2vw;
+    line-height: 150%;
+    margin-left: 1vw;
+    padding: 1vw 1vw;
+    margin-top: 10vh;
+    align-self: center;
+  }
+  .dusk-art-3-v1 {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    font-size: 1.5vw;
+    line-height: 150%;
+    color: white;
+  }
+  .dusk-art-3-v2 {
+    grid-column: 5 / span 2;
+    grid-row: 4 / span 1;
+    font-size: 1.5vw;
+    line-height: 150%;
+    color: #0cc8f2;
+  }
+  .dusk-art-4 {
+    grid-area: dusk-art-4;
+  }
+  .dusk-art-5 {
+    grid-area: dusk-art-5;
+  }
+  .dusk-art-6 {
+    grid-area: dusk-art-6;
+  }
 
-/*DAWN ENDING*/
+  /*#091740, #16348c, #295bf2, #276bf2, #248cf2, #0cc8f2*/
+  /*  font-family: obviously-extended, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2vw;
+    grid-column: 1 / span 8;
+    grid-row: 1 / span 6;
+    color: #f2441d;
+    margin-left: 1vw;*/
 
-.dawn-ending {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("real-sunrise.gif");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.dawn-ending-text, .dusk-ending-text {
-  font-family: ibm-plex-mono, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3vw;
-  text-align: center;
-  margin-bottom: 5vh;
-  color: white;
-}
+  /*DAWN ENDING*/
 
-/*DUSK ENDING*/
+  .dawn-ending {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("real-sunrise.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .dawn-ending-text, .dusk-ending-text {
+    font-family: ibm-plex-mono, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6vw;
+    text-align: center;
+    margin-bottom: 5vh;
+    color: white;
+  }
 
-.dusk-ending {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("real-sunset.gif");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  /*DUSK ENDING*/
+
+  .dusk-ending {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("real-sunset.gif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
 }
